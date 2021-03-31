@@ -1,0 +1,15 @@
+*.txt
+*.csv
+*.xls
+*.xlsx
+*.bak
+*.kicad_pcb-bak
+*.sch-bak
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.xml
+cube-config/
+!cube-config/cube-config.ioc
+_autosave*
