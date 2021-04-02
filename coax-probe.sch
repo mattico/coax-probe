@@ -164,8 +164,8 @@ L Device:R_Small_US R5
 U 1 1 6069184A
 P 2900 5050
 F 0 "R5" H 2832 5004 50  0000 R CNN
-F 1 "-" H 2832 5095 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2900 5050 50  0001 C CNN
+F 1 "DNP" H 2832 5095 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2900 5050 50  0001 C CNN
 F 3 "~" H 2900 5050 50  0001 C CNN
 	1    2900 5050
 	1    0    0    1   
@@ -174,17 +174,6 @@ Wire Wire Line
 	2900 4950 3000 4950
 Wire Wire Line
 	3000 5150 2900 5150
-$Comp
-L Connector_Generic:Conn_01x03 J4
-U 1 1 606986ED
-P 2050 5100
-F 0 "J4" H 1968 5417 50  0000 C CNN
-F 1 "Conn_01x03" H 1968 5326 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2050 5100 50  0001 C CNN
-F 3 "~" H 2050 5100 50  0001 C CNN
-	1    2050 5100
-	-1   0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 60699770
@@ -365,13 +354,13 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J6
 U 1 1 606D42E6
-P 10200 4950
-F 0 "J6" H 10280 4992 50  0000 L CNN
-F 1 "Conn_01x02" H 10280 4901 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 4950 50  0001 C CNN
-F 3 "~" H 10200 4950 50  0001 C CNN
-	1    10200 4950
-	1    0    0    -1  
+P 10200 5050
+F 0 "J6" H 10280 5092 50  0000 L CNN
+F 1 "Conn_01x02" H 10280 5001 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 10200 5050 50  0001 C CNN
+F 3 "~" H 10200 5050 50  0001 C CNN
+	1    10200 5050
+	1    0    0    1   
 $EndComp
 Text Label 2650 4850 0    50   ~ 0
 IN+
@@ -532,19 +521,17 @@ F 5 "CL21A106KAYNNNE" H 9850 2000 50  0001 C CNN "MPN"
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	10100 1950 10000 1950
-Wire Wire Line
 	9850 1850 9850 1800
 $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 6066DDD8
-P 10300 1950
-F 0 "J3" H 10380 1992 50  0000 L CNN
-F 1 "Conn_01x02" H 10380 1901 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10300 1950 50  0001 C CNN
-F 3 "~" H 10300 1950 50  0001 C CNN
-	1    10300 1950
-	1    0    0    -1  
+P 10200 2050
+F 0 "J3" H 10280 2092 50  0000 L CNN
+F 1 "Conn_01x02" H 10280 2001 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 10200 2050 50  0001 C CNN
+F 3 "~" H 10200 2050 50  0001 C CNN
+	1    10200 2050
+	1    0    0    1   
 $EndComp
 $Comp
 L power:VSS #PWR022
@@ -697,7 +684,7 @@ L Device:R_US R12
 U 1 1 607199FD
 P 7800 5400
 F 0 "R12" H 7868 5446 50  0000 L CNN
-F 1 "-" H 7868 5355 50  0000 L CNN
+F 1 "DNP" H 7868 5355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 7800 5400 50  0001 C CNN
 F 3 "~" H 7800 5400 50  0001 C CNN
 	1    7800 5400
@@ -748,7 +735,7 @@ Text Notes 3750 3100 0    50   ~ 0
 Text Notes 3000 1550 0    50   ~ 0
 175+25 balances 402||402\n\n175 ohm protects inputs up\nto 5V beyond rails.
 Text Notes 10250 1800 0    50   ~ 0
-2.5V - 6V
+3V - 6V
 Text Notes 1300 2000 0    50   ~ 0
 ±3.3V common-mode input\nrange with ±5V supplies.
 Text Notes 10200 4750 0    50   ~ 0
@@ -774,8 +761,6 @@ F 3 "" H 10000 2300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10000 2300 10000 2200
-Wire Wire Line
-	10000 2050 10100 2050
 $Comp
 L Amplifier_Operational:LMH6611 U1
 U 1 1 6082C507
@@ -817,16 +802,6 @@ Wire Wire Line
 	2300 5250 2300 5200
 Wire Wire Line
 	2300 5200 2250 5200
-Wire Wire Line
-	3000 5250 2600 5250
-Wire Wire Line
-	2600 5250 2600 5100
-Wire Wire Line
-	2600 5100 2250 5100
-Wire Wire Line
-	2600 5000 2600 4850
-Wire Wire Line
-	2250 5000 2600 5000
 $Comp
 L Regulator_SwitchedCapacitor:ICL7660 U5
 U 1 1 60683FE4
@@ -846,32 +821,6 @@ Wire Wire Line
 Connection ~ 10000 2200
 Wire Wire Line
 	10000 2200 10000 2050
-$Comp
-L Jumper:SolderJumper_2_Open JP1
-U 1 1 606AD10A
-P 8300 2400
-F 0 "JP1" V 8254 2468 50  0000 L CNN
-F 1 "LV" V 8345 2468 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 8300 2400 50  0001 C CNN
-F 3 "~" H 8300 2400 50  0001 C CNN
-	1    8300 2400
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR06
-U 1 1 606ADCFF
-P 8300 2550
-F 0 "#PWR06" H 8300 2300 50  0001 C CNN
-F 1 "GND" H 8300 2400 50  0000 C CNN
-F 2 "" H 8300 2550 50  0001 C CNN
-F 3 "" H 8300 2550 50  0001 C CNN
-	1    8300 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8300 2250 8300 2200
-Wire Wire Line
-	8300 2200 8250 2200
 Wire Wire Line
 	8250 2000 8300 2000
 Wire Wire Line
@@ -990,4 +939,26 @@ Wire Wire Line
 	3700 5050 4400 5050
 Text Label 5950 5150 0    50   ~ 0
 OUTD
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 606986ED
+P 2050 5100
+F 0 "J4" H 2050 4800 50  0000 C CNN
+F 1 "Conn_01x03" H 2050 4900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2050 5100 50  0001 C CNN
+F 3 "~" H 2050 5100 50  0001 C CNN
+	1    2050 5100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 5100 2600 5100
+Wire Wire Line
+	2600 5100 2600 4850
+Wire Wire Line
+	2550 5250 2550 5000
+Wire Wire Line
+	2550 5000 2250 5000
+Wire Wire Line
+	2550 5250 3000 5250
+NoConn ~ 8250 2200
 $EndSCHEMATC
