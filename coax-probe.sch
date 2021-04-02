@@ -114,8 +114,8 @@ L Connector:Conn_Coaxial J2
 U 1 1 6064EF70
 P 5650 2000
 F 0 "J2" H 5750 1975 50  0000 L CNN
-F 1 "Conn_Coaxial" H 5750 1884 50  0000 L CNN
-F 2 "Beck:Coax_Cable_Solder" H 5650 2000 50  0001 C CNN
+F 1 "SMA" H 5750 1884 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount" H 5650 2000 50  0001 C CNN
 F 3 " ~" H 5650 2000 50  0001 C CNN
 	1    5650 2000
 	1    0    0    -1  
@@ -304,8 +304,8 @@ L Connector:Conn_Coaxial J5
 U 1 1 606A7C90
 P 6550 5150
 F 0 "J5" H 6650 5125 50  0000 L CNN
-F 1 "Conn_Coaxial" H 6650 5034 50  0000 L CNN
-F 2 "Beck:Coax_Cable_Solder" H 6550 5150 50  0001 C CNN
+F 1 "SMA" H 6650 5034 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount" H 6550 5150 50  0001 C CNN
 F 3 " ~" H 6550 5150 50  0001 C CNN
 	1    6550 5150
 	1    0    0    -1  
